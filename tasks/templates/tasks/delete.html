@@ -1,0 +1,59 @@
+<style>
+
+	body{
+		background-color: #638CB8;
+        text-align: center;
+	}
+
+	input::placeholder {
+	  color: #d3d3d3;
+	}
+
+	.center-column{
+		width:600px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: #fff;
+		border-radius: 3px;
+		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+	}
+
+	.btn-submit{
+		color: black;
+        box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+        background-color: red;
+        color: white;
+        border-radius: 10%;
+        text-decoration: none;
+        padding: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border: none;
+        margin-top: 10px;
+        cursor: pointer;
+        font-size: 15px;
+	}
+    
+    .btn{
+        color: white;
+        border-radius: 10%;
+        text-decoration: none;
+        padding: 1%;
+        box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+        background-color:  #906abd;
+    }
+
+</style>
+
+<div class="center-column">
+    <p>Are you sure you want to delete "{{item}}"?</p>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <input class="btn-submit" type='submit' name='Confirm' value="Delete">
+    </form>
+
+    <a class="btn" href="{% url 'list' %}">Back</a>
+
+    
+</div>

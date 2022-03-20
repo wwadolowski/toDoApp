@@ -1,0 +1,55 @@
+<style>
+
+	body{
+		background-color: #638CB8;
+        text-align: center;
+	}
+
+	input::placeholder {
+	  color: #d3d3d3;
+	}
+
+	.center-column{
+		width:600px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: #fff;
+		border-radius: 3px;
+		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+	}
+
+	.btn-submit{
+		color: black;
+        box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+        background-color: #906abd;
+        color: white;
+        border-radius: 10%;
+        text-decoration: none;
+        padding: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border: none;
+        margin-top: 10px;
+        cursor: pointer;
+	}
+    
+    .btn{
+        color: white;
+        border-radius: 10%;
+        text-decoration: none;
+        padding: 1%;
+        box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+        background-color: red;
+    }
+
+</style>
+
+
+<div class="center-column">
+    <h2>Update Task</h2>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form}}
+        <input class="btn-submit" type="submit" name="Update Task" value="Update">
+    </form>
+</div>
